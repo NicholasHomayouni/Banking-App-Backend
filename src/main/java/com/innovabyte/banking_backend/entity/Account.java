@@ -6,10 +6,10 @@ import java.util.Date;
 
 @Entity
 @Table(name = "account")
-public class accounts {
-    @id // @id annotation inherently manages constraints for unique = true and nullable = false
+public class Account {
+    @Id // @id annotation inherently manages constraints for unique = true and nullable = false
     @GeneratedValue(strategy = GenerationType.IDENTITY) // auto-increment primary key
-    private int id;
+    private Integer id;
 
     @Column(name = "account_number", unique = true, nullable = false)
     private String accountNumber;
@@ -29,7 +29,7 @@ public class accounts {
     @Column(name = "status")
     private String status;
 
-    public accounts(int id, String accountNumber, String name, String accountType, Double balance, String status) {
+    public Account(Integer id, String accountNumber, String name, String accountType, Double balance, String status) {
         this.id = id;
         this.accountNumber = accountNumber;
         this.name = name;
@@ -87,11 +87,11 @@ public class accounts {
         this.accountNumber = accountNumber;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 }
