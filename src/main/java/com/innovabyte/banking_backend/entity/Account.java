@@ -29,6 +29,8 @@ public class Account {
     @Column(name = "status")
     private String status;
 
+    public Account() {}
+
     public Account(Integer id, String accountNumber, String name, String accountType, Double balance, String status) {
         this.id = id;
         this.accountNumber = accountNumber;
