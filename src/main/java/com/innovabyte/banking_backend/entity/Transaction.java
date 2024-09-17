@@ -23,17 +23,17 @@ public class Transaction {
     private String description;
 
     @Column(name = "debit")
-    private double debit;
+    private Double debit;
 
     @Column(name = "credit")
-    private double credit;
+    private Double credit;
 
     @Column(name = "balance_after")
-    private double balanceAfter;
+    private Double balanceAfter;
 
     public Transaction() {}
 
-    public Transaction(Integer id, String description, double debit, double credit, double balanceAfter, Account account) {
+    public Transaction(Integer id, String description, Double debit, Double credit, Double balanceAfter, Account account) {
         this.id = id;
         this.description = description;
         this.debit = debit;
@@ -75,27 +75,27 @@ public class Transaction {
         this.description = description;
     }
 
-    public double getDebit() {
+    public Double getDebit() {
         return debit;
     }
 
-    public void setDebit(double debit) {
+    public void setDebit(Double debit) {
         this.debit = debit;
     }
 
-    public double getCredit() {
+    public Double getCredit() {
         return credit;
     }
 
-    public void setCredit(double credit) {
+    public void setCredit(Double credit) {
         this.credit = credit;
     }
 
-    public double getBalanceAfter() {
+    public Double getBalanceAfter() {
         return balanceAfter;
     }
 
-    public void setBalanceAfter(double balanceAfter) {
+    public void setBalanceAfter(Double balanceAfter) {
         this.balanceAfter = balanceAfter;
     }
 }
